@@ -1,6 +1,6 @@
 ---
 layout: lecture
-title: "Course overview + the shell"
+title: "Огляд курсу + оболонка"
 date: 2020-01-13
 ready: true
 video:
@@ -8,92 +8,90 @@ video:
   id: Z56Jmr9Z34Q
 ---
 
-# Motivation
+# Мотивація
 
-As computer scientists, we know that computers are great at aiding in
-repetitive tasks. However, far too often, we forget that this applies
-just as much to our _use_ of the computer as it does to the computations
-we want our programs to perform. We have a vast range of tools
-available at our fingertips that enable us to be more productive and
-solve more complex problems when working on any computer-related
-problem. Yet many of us utilize only a small fraction of those tools; we
-only know enough magical incantations by rote to get by, and blindly
-copy-paste commands from the internet when we get stuck.
+Як комп'ютерні науковці, ми знаємо, що комп'ютери чудово допомагають у вирішенні 
+повторюваних завдань. Однак надто часто ми забуваємо, що це стосується 
+як нашого _використання_ комп'ютера, так і обчислень, 
+які ми хочемо, щоб наші програми виконували. У нас є широкий спектр інструментів, 
+які дозволяють нам бути продуктивнішими й 
+розв'язувати складніші проблеми при роботі з будь-якою комп'ютерною 
+задачею. Та багато з нас використовують лише невелику частину цих інструментів; ми 
+знаємо достатньо магічних заклинань напам'ять, щоб впоратися, і бездумно 
+копіюємо-вставляємо команди з інтернету, коли застрягаємо.
 
-This class is an attempt to address this.
+Цей курс є спробою вирішити це.
 
-We want to teach you how to make the most of the tools you know, show
-you new tools to add to your toolbox, and hopefully instill in you some
-excitement for exploring (and perhaps building) more tools on your own.
-This is what we believe to be the missing semester from most Computer
-Science curricula.
+Ми хочемо навчити вас використовувати на повну ваші відомі інструменти, показати 
+вам нові інструменти, які можна додати до вашого набору, і, сподіваємось, вбудувати в вас деякий 
+ентузіазм для дослідження (і, можливо, створення) більшої кількості інструментів самостійно. 
+Ось що, на нашу думку, відсутнє у більшості навчальних планів з комп'ютерних наук.
 
-# Class structure
+# Структура курсу
 
-The class consists of 11 1-hour lectures, each one centering on a
-[particular topic](/2020/). The lectures are largely independent,
-though as the semester goes on we will presume that you are familiar
-with the content from the earlier lectures. We have lecture notes
-online, but there will be a lot of content covered in class (e.g. in the
-form of demos) that may not be in the notes. We will be recording
-lectures and posting the recordings online.
+Курс складається з 11 одногодинних лекцій, кожна з яких зосереджена на 
+[певній темі](/2020/). Лекції в основному незалежні, 
+хоча з часом ми будемо передбачати, що ви знайомі 
+з матеріалом попередніх лекцій. У нас є нотатки до лекцій 
+онлайн, але на курсі буде багато матеріалу (наприклад, у 
+вигляді демонстрацій), який може не бути в нотатках. Ми будемо записувати 
+лекції та розміщувати записи онлайн.
 
-We are trying to cover a lot of ground over the course of just 11 1-hour
-lectures, so the lectures are fairly dense. To allow you some time to
-get familiar with the content at your own pace, each lecture includes a
-set of exercises that guide you through the lecture's key points. After
-each lecture, we are hosting office hours where we will be present to
-help answer any questions you might have. If you are attending the class
-online, you can send us questions at
+Ми намагаємося охопити багато матеріалу за допомогою лише 11 одногодинних 
+лекцій, тому лекції досить щільні. Щоб дати вам час 
+ознайомитися з матеріалом у вашому власному темпі, кожна лекція включає 
+набір вправ, які направляють вас через ключові моменти лекції.
+Після кожної лекції ми проводимо години консультацій, де ми будемо присутні, щоб 
+допомогти відповісти на будь-які ваші питання. Якщо ви відвідуєте курс 
+онлайн, ви можете надсилати нам питання на 
 [missing-semester@mit.edu](mailto:missing-semester@mit.edu).
 
-Due to the limited time we have, we won't be able to cover all the tools
-in the same level of detail a full-scale class might. Where possible, we
-will try to point you towards resources for digging further into a tool
-or topic, but if something particularly strikes your fancy, don't
-hesitate to reach out to us and ask for pointers!
+Через обмежений час, який у нас є, ми не зможемо розглянути всі інструменти 
+з тією ж деталізацією, яку міг би надати повноцінний курс. Де це можливо, ми 
+намагатимемося вказати вам на ресурси для детальнішого вивчення інструменту 
+чи теми, але якщо щось особливо приверне вашу увагу, не 
+соромтеся звернутися до нас і попросити про поради!
 
-# Topic 1: The Shell
+# Тема 1: Оболонка
 
-## What is the shell?
+## Що таке оболонка?
 
-Computers these days have a variety of interfaces for giving them
-commands; fanciful graphical user interfaces, voice interfaces, and
-even AR/VR are everywhere. These are great for 80% of use-cases, but
-they are often fundamentally restricted in what they allow you to do —
-you cannot press a button that isn't there or give a voice command that
-hasn't been programmed. To take full advantage of the tools your
-computer provides, we have to go old-school and drop down to a textual
-interface: The Shell.
+У сучасних комп'ютерів є різноманітні інтерфейси для введення команд; 
+різноколірні графічні інтерфейси користувача, голосові інтерфейси, 
+а також AR/VR є скрізь. Це чудово для 80% випадків використання, але 
+вони часто фундаментально обмежені в тому, що дозволяють вам робити — 
+ви не можете натиснути кнопку, якої немає, або вимовити голосову команду, 
+яка не була запрограмована. Щоб повністю використовувати інструменти, які 
+надає ваш комп'ютер, ми повинні повернутися до старої школи й перейти до текстового 
+інтерфейсу: Оболонки.
 
-Nearly all platforms you can get your hands on have a shell in one form or
-another, and many of them have several shells for you to choose from.
-While they may vary in the details, at their core they are all roughly
-the same: they allow you to run programs, give them input, and inspect
-their output in a semi-structured way.
+Майже всі платформи, які ви можете мати під рукою, мають оболонку у тій чи 
+іншій формі, і багато з них мають кілька оболонок на ваш вибір. 
+Хоча вони можуть відрізнятися деталями, в їхній основі вони всі приблизно 
+однакові: вони дозволяють вам запускати програми, передавати їм вхідні дані та перевіряти 
+їхній вихід у напівструктурований спосіб.
 
-In this lecture, we will focus on the Bourne Again SHell, or "bash" for
-short. This is one of the most widely used shells, and its syntax is
-similar to what you will see in many other shells. To open a shell
-_prompt_ (where you can type commands), you first need a _terminal_.
-Your device probably shipped with one installed, or you can install one
-fairly easily.
+У цій лекції ми зосередимося на Bourne Again SHell, або "bash" 
+у скороченні. Це одна з найбільш широко використовуваних оболонок, і її синтаксис 
+схожий на те, що ви бачитимете в багатьох інших оболонках. Щоб відкрити _промпт_ 
+(де ви можете вводити команди), спершу вам потрібен _термінал_. 
+Ваш пристрій, ймовірно, був поставлений із встановленим терміналом, або ви можете встановити
+його дуже легко.
 
-## Using the shell
+## Використання оболонки
 
-When you launch your terminal, you will see a _prompt_ that often looks
-a little like this:
+Коли ви запускаєте свій термінал, ви побачите _промпт_, який часто виглядає приблизно так:
 
 ```console
 missing:~$ 
 ```
 
-This is the main textual interface to the shell. It tells you that you
-are on the machine `missing` and that your "current working directory",
-or where you currently are, is `~` (short for "home"). The `$` tells you
-that you are not the root user (more on that later). At this prompt you
-can type a _command_, which will then be interpreted by the shell. The
-most basic command is to execute a program:
+Це основний текстовий інтерфейс до оболонки. Він повідомляє вам, що ви 
+знаходитесь на машині `missing` і що ваш "поточний робочий каталог", 
+або місце, де ви зараз знаходитесь, — це `~` (скорочення від "домашній"). Символ `$` каже вам, 
+що ви не користувач root (про це пізніше). На цьому промпті ви 
+можете ввести _команду_, яка потім буде інтерпретована оболонкою. 
+Найпростіша команда — це виконання програми:
 
 ```console
 missing:~$ date
@@ -101,34 +99,34 @@ Fri 10 Jan 2020 11:49:31 AM EST
 missing:~$ 
 ```
 
-Here, we executed the `date` program, which (perhaps unsurprisingly)
-prints the current date and time. The shell then asks us for another
-command to execute. We can also execute a command with _arguments_:
+Тут ми виконали програму `date`, яка (можливо, не дивно) 
+виводить поточну дату та час. Після цього оболонка просить нас про іншу 
+команду для виконання. Ми також можемо виконати команду з _аргументами_:
 
 ```console
 missing:~$ echo hello
 hello
 ```
 
-In this case, we told the shell to execute the program `echo` with the
-argument `hello`. The `echo` program simply prints out its arguments.
-The shell parses the command by splitting it by whitespace, and then
-runs the program indicated by the first word, supplying each subsequent
-word as an argument that the program can access. If you want to provide
-an argument that contains spaces or other special characters (e.g., a
-directory named "My Photos"), you can either quote the argument with `'`
-or `"` (`"My Photos"`), or escape just the relevant characters with `\`
+У цьому випадку ми сказали оболонці виконати програму `echo` з 
+аргументом `hello`. Програма `echo` просто виводить свої аргументи. 
+Оболонка аналізує команду, розділяючи її пробілами, а потім 
+запускає програму, вказану першим словом, передаючи кожне наступне 
+слово як аргумент, до якого програма може отримати доступ. Якщо ви хочете передати 
+аргумент, який містить пробіли або інші спеціальні символи (наприклад, 
+каталог під назвою "My Photos"), ви можете або взяти аргумент в лапки `'` 
+або `"` (`"My Photos"`), або використовувати обернену скісну риску `\` 
 (`My\ Photos`).
 
-But how does the shell know how to find the `date` or `echo` programs?
-Well, the shell is a programming environment, just like Python or Ruby,
-and so it has variables, conditionals, loops, and functions (next
-lecture!). When you run commands in your shell, you are really writing a
-small bit of code that your shell interprets. If the shell is asked to
-execute a command that doesn't match one of its programming keywords, it
-consults an _environment variable_ called `$PATH` that lists which
-directories the shell should search for programs when it is given a
-command:
+Але як оболонка знає, як знайти програми `date` або `echo`? 
+Ну, оболонка — це програмне середовище, як Python або Ruby, 
+і тому вона має змінні, умовні конструкції, цикли та функції (наступна 
+лекція!). Коли ви запускаєте команди у своїй оболонці, ви насправді пишете 
+невеликий фрагмент коду, який інтерпретує ваша оболонка. Якщо оболонка отримує 
+команду, яка не відповідає жодному з її програмних ключових слів, вона 
+звертається до _змінної середовища_ під назвою `$PATH`, яка перелічує, 
+які каталоги оболонка повинна шукати програми, коли їй дають 
+команду:
 
 
 ```console
@@ -140,26 +138,26 @@ missing:~$ /bin/echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ```
 
-When we run the `echo` command, the shell sees that it should execute
-the program `echo`, and then searches through the `:`-separated list of
-directories in `$PATH` for a file by that name. When it finds it, it
-runs it (assuming the file is _executable_; more on that later). We can
-find out which file is executed for a given program name using the
-`which` program. We can also bypass `$PATH` entirely by giving the
-_path_ to the file we want to execute.
+Коли ми запускаємо команду `echo`, оболонка бачить, що вона повинна виконати 
+програму `echo`, а потім шукає файл із такою назвою в розділеному `:` списку 
+каталогів у `$PATH`. Коли вона знаходить його, вона 
+запускає його (за умови, що файл є _виконавчим_; про це пізніше). Ми можемо 
+дізнатися, який файл виконується для даної назви програми, використовуючи 
+програму `which`. Ми також можемо повністю обійти `$PATH`, вказавши 
+_шлях_ до файлу, який ми хочемо виконати.
 
-## Navigating in the shell
+## Навігація в оболонці
 
-A path on the shell is a delimited list of directories; separated by `/`
-on Linux and macOS and `\` on Windows. On Linux and macOS, the path `/`
-is the "root" of the file system, under which all directories and files
-lie, whereas on Windows there is one root for each disk partition (e.g.,
-`C:\`). We will generally assume that you are using a Linux filesystem
-in this class. A path that starts with `/` is called an _absolute_ path.
-Any other path is a _relative_ path. Relative paths are relative to the
-current working directory, which we can see with the `pwd` command and
-change with the `cd` command. In a path, `.` refers to the current
-directory, and `..` to its parent directory:
+Шлях в оболонці — це розділений список каталогів; розділений `/` 
+в Linux і macOS та `\` в Windows. У Linux і macOS шлях `/` 
+є "коренем" файлової системи, під яким знаходяться всі каталоги та файли, 
+тоді як у Windows є один корінь для кожного дискового розділу (наприклад, 
+`C:\`). Ми загалом припускаємо, що ви використовуєте файлову систему Linux 
+у цьому курсі. Шлях, який починається з `/`, називається _абсолютним_ шляхом. 
+Якийсь інший шлях є _відносним_ шляхом. Відносні шляхи відносяться до 
+поточного робочого каталогу, який ми можемо побачити за допомогою команди `pwd` і 
+змінити за допомогою команди `cd`. У шляху `.` належить до поточного 
+каталогу, а `..` - до його батьківського каталогу:
 
 ```console
 missing:~$ pwd
@@ -180,16 +178,15 @@ missing:~$ ../../bin/echo hello
 hello
 ```
 
-Notice that our shell prompt kept us informed about what our current
-working directory was. You can configure your prompt to show you all
-sorts of useful information, which we will cover in a later lecture.
+Зверніть увагу, що наш оболонковий запит постійно інформував нас про поточний
+робочий каталог. Ви можете налаштувати свій запит так, щоб він показував вам всі
+різні корисні інформації, про які ми поговоримо в наступній лекції.
 
-In general, when we run a program, it will operate in the current
-directory unless we tell it otherwise. For example, it will usually
-search for files there, and create new files there if it needs to.
+Зазвичай, коли ми запускаємо програму, вона працює в поточній
+каталог, якщо ми не скажемо іншого. Наприклад, вона зазвичай
+шукає файлы там, і створює нові файли там, якщо потрібно.
 
-To see what lives in a given directory, we use the `ls` command:
-
+Щоб побачити, що знаходиться в даному каталозі, ми використовуємо команду `ls`:
 ```console
 missing:~$ ls
 missing:~$ cd ..
@@ -205,12 +202,12 @@ home
 ...
 ```
 
-Unless a directory is given as its first argument, `ls` will print the
-contents of the current directory. Most commands accept flags and
-options (flags with values) that start with `-` to modify their
-behavior. Usually, running a program with the `-h` or `--help` flag
-will print some help text that tells you what flags
-and options are available. For example, `ls --help` tells us:
+Якщо директорія не задана як перший аргумент, `ls` виведе
+вміст поточного каталогу. Більшість команд приймають прапори й
+опції (прапори зі значеннями), що починаються з `-`, для зміни їх
+поведінки. Зазвичай, запуск програми з прапором `-h` або `--help`
+виводить текст довідки, який повідомляє вам, які прапори
+й опції доступні. Наприклад, `ls --help` каже нам:
 
 ```
   -l                         use a long listing format
@@ -221,29 +218,29 @@ missing:~$ ls -l /home
 drwxr-xr-x 1 missing  users  4096 Jun 15  2019 missing
 ```
 
-This gives us a bunch more information about each file or directory
-present. First, the `d` at the beginning of the line tells us that
-`missing` is a directory. Then follow three groups of three characters
-(`rwx`). These indicate what permissions the owner of the file
-(`missing`), the owning group (`users`), and everyone else respectively
-have on the relevant item. A `-` indicates that the given principal does
-not have the given permission. Above, only the owner is allowed to
-modify (`w`) the `missing` directory (i.e., add/remove files in it). To
-enter a directory, a user must have "search" (represented by "execute":
-`x`) permissions on that directory (and its parents). To list its
-contents, a user must have read (`r`) permissions on that directory. For
-files, the permissions are as you would expect. Notice that nearly all
-the files in `/bin` have the `x` permission set for the last group,
-"everyone else", so that anyone can execute those programs.
+Це дає нам багато додаткової інформації про кожен файл або директорію
+присутній. По-перше, `d` на початку рядка говорить нам, що
+`missing` це директорія. Потім йдуть три групи по три символи
+(`rwx`). Вони вказують, які права власника файлу
+(`missing`), власника групи (`users`), і всіх інших відповідно
+мають на відповідний елемент. `-` вказує на те, що дана основна відомість не
+має даного дозволу. Вище, лише власник має дозвіл
+змінювати (`w`) директорію `missing` (тобто, додавати/видаляти файли в ній). Щоб
+увійти в директорію, користувач повинен мати "пошук" (представлений "виконанням":
+`x`) права на цю директорію (і її батькі). Щоб перелічити її
+вміст, користувач повинен мати читання (`r`) права на цю директорію. Для
+файлів дозволи є такими, як ви очікуєте. Зверніть увагу, що майже всі
+файли в `/bin` мають встановлений дозвіл `x` для останньої групи,
+"всі інші", так що будь-хто може виконувати ці програми.
 
-Some other handy programs to know about at this point are `mv` (to
-rename/move a file), `cp` (to copy a file), and `mkdir` (to make a new
-directory).
+Деякі інші корисні програми, про які варто знати на цьому етапі, це `mv` (для
+перейменування/переміщення файлу), `cp` (для копіювання файлу), і `mkdir` (для створення нового
+директорія).
 
-If you ever want _more_ information about a program's arguments, inputs,
-outputs, or how it works in general, give the `man` program a try. It
-takes as an argument the name of a program, and shows you its _manual
-page_. Press `q` to exit.
+Якщо ви коли-небудь захочете _більше_ інформації про аргументи програми, вхідні дані,
+вихідні дані, або як вона працює в цілому, спробуйте програму `man`. Вона
+приймає як аргумент назву програми, і показує вам її _мауал
+_сторінка__. Натисніть `q` щоб вийти.
 
 ```console
 missing:~$ man ls
@@ -251,15 +248,15 @@ missing:~$ man ls
 
 ## Connecting programs
 
-In the shell, programs have two primary "streams" associated with them:
-their input stream and their output stream. When the program tries to
-read input, it reads from the input stream, and when it prints
-something, it prints to its output stream. Normally, a program's input
-and output are both your terminal. That is, your keyboard as input and
-your screen as output. However, we can also rewire those streams!
+В оболонці програми мають два основних "потоки", пов'язані з ними:
+їхній вхідний потік і вихідний потік. Коли програма намагається
+зчитати вхідні дані, вона зчитує з вхідного потоку, а коли вона друкує
+щось, вона друкує до свого вихідного потоку. Зазвичай вхід даних для програми
+й вихід — це ваш термінал. Тобто, ваша клавіатура як вхід і
+ваш екран як вихід. Однак, ми також можемо перенастроїть ці потоки!
 
-The simplest form of redirection is `< file` and `> file`. These let you
-rewire the input and output streams of a program to a file respectively:
+Найпростіша форма перенаправлення — це `< file` та `> file`. Вони дозволяють вам
+перенастроїти вхідний і вихідний потоки програми відповідно до файлу:
 
 ```console
 missing:~$ echo hello > hello.txt
@@ -272,16 +269,16 @@ missing:~$ cat hello2.txt
 hello
 ```
 
-Demonstrated in the example above, `cat` is a program that con`cat`enates
-files. When given file names as arguments, it prints the contents of each of
-the files in sequence to its output stream. But when `cat` is not given any
-arguments, it prints contents from its input stream to its output stream (like
-in the third example above).
+Як показано в наведеному вище прикладі, `cat` - це програма, яка кон`cat`енує
+файли. Коли вона отримує імена файлів в якості аргументів, вона друкує вміст кожного з
+файлів послідовно у свій вихідний потік. Але коли `cat` не отримує жодних
+аргументів, вона друкує вміст зі свого вхідного потоку у свій вихідний потік (як
+у третьому прикладі вище).
 
-You can also use `>>` to append to a file. Where this kind of
-input/output redirection really shines is in the use of _pipes_. The `|`
-operator lets you "chain" programs such that the output of one is the
-input of another:
+Ви також можете використовувати `>>` для додавання до файлу. Головним чином,
+перенаправлення вводу/виводу використовується для використання _труб_. Оператор `|`
+дозволяє вам "ланцюжком" з'єднати програми так, що вихід одного є
+вхідними даними іншого:
 
 ```console
 missing:~$ ls -l / | tail -n1
@@ -290,36 +287,34 @@ missing:~$ curl --head --silent google.com | grep --ignore-case content-length |
 219
 ```
 
-We will go into a lot more detail about how to take advantage of pipes
-in the lecture on data wrangling.
+Ми детальніше розглянемо, як використовувати переваги труб
+на лекції з питань обробки даних.
 
-## A versatile and powerful tool
+## Універсальний та потужний інструмент
 
-On most Unix-like systems, one user is special: the "root" user. You may
-have seen it in the file listings above. The root user is above (almost)
-all access restrictions, and can create, read, update, and delete any
-file in the system. You will not usually log into your system as the
-root user though, since it's too easy to accidentally break something.
-Instead, you will be using the `sudo` command. As its name implies, it
-lets you "do" something "as su" (short for "super user", or "root").
-When you get permission denied errors, it is usually because you need to
-do something as root. Though make sure you first double-check that you
-really wanted to do it that way!
+На більшості систем, схожих на Unix, один користувач є особливим: користувач "root". Ви, можливо,
+бачили його в списках файлів звище. Користувач root перебуває над (майже)
+усіма обмеженнями доступу і може створювати, читати, оновлювати та видаляти будь-які
+файли в системі. Зазвичай ви не входите у свою систему як
+користувач root, оскільки занадто легко нехотячки зламати щось.
+Замість цього ви будете використовувати команду `sudo`. Як же його назва має на увазі, це
+дозволяє вам "робити" щось "як su" (скорочено "супер користувач", або "root").
+Коли ви отримуєте помилки заборони доступу, це зазвичай означає, що вам потрібно щось зробити як root. Але переконайтеся, що ви спочатку двічі перевірили, що ви дійсно хотіли це зробити таким способом!
 
-One thing you need to be root in order to do is writing to the `sysfs` file
-system mounted under `/sys`. `sysfs` exposes a number of kernel parameters as
-files, so that you can easily reconfigure the kernel on the fly without
-specialized tools. **Note that sysfs does not exist on Windows or macOS.**
+Є одна річ, для якої вам потрібно бути root, щоб зробити це, це запис в систему файлів `sysfs`, 
+змонтовану в `/sys`. `sysfs` відображає ряд параметрів ядра в якості
+файлів, так що ви можете легко переналаштовувати ядро на льоту без
+спеціалізованих інструментів. **Зверніть увагу, що sysfs не існує на Windows або macOS.**
 
-For example, the brightness of your laptop's screen is exposed through a file
-called `brightness` under
+Наприклад, яскравість екрана вашого ноутбука відображається через файл
+названий `brightness` нижче
 
 ```
 /sys/class/backlight
 ```
 
-By writing a value into that file, we can change the screen brightness.
-Your first instinct might be to do something like:
+Записавши значення в цей файл, ми можемо змінити яскравість екрана.
+Вашим першим інстинктом може бути щось на зразок:
 
 ```console
 $ sudo find -L /sys/class/backlight -maxdepth 2 -name '*brightness*'
@@ -330,87 +325,86 @@ An error occurred while redirecting file 'brightness'
 open: Permission denied
 ```
 
-This error may come as a surprise. After all, we ran the command with
-`sudo`! This is an important thing to know about the shell. Operations
-like `|`, `>`, and `<` are done _by the shell_, not by the individual
-program. `echo` and friends do not "know" about `|`. They just read from
-their input and write to their output, whatever it may be. In the case
-above, the _shell_ (which is authenticated just as your user) tries to
-open the brightness file for writing, before setting that as `sudo
-echo`'s output, but is prevented from doing so since the shell does not
-run as root. Using this knowledge, we can work around this:
+Ця помилка може здивувати. Адже ми запустили команду з
+`sudo`! Це важлива річ, яку треба знати про оболонку. Операції
+як `|`, `>`, і `<` виконуються _оболонкою_, а не окремою
+програмою. `echo` та інші не "знають" про `|`. Вони просто читають з
+їх входу та записують на їх вихід, що б це не було. В такому випадку
+_shell_ (котра аутентифікована як ваш користувач) намагається
+відкрити файл яскравості для запису, перед тим як встановити це як `sudo
+echo` вихід, але йому перешкоджають зробити це, оскільки оболонка не
+запущена як root. З використанням цих знань, ми можемо обійти це:
 
 ```console
 $ echo 3 | sudo tee brightness
 ```
 
-Since the `tee` program is the one to open the `/sys` file for writing,
-and _it_ is running as `root`, the permissions all work out. You can
-control all sorts of fun and useful things through `/sys`, such as the
-state of various system LEDs (your path might be different):
+Оскільки програма tee відкриває файл /sys для запису, 
+і _вона_ працює як root, усі дозволи виходять як потрібно. 
+Ви можете керувати всілякими цікавими та корисними речами через /sys, такими як 
+стан різних системних LED-діодів (ваш шлях може відрізнятися):
 
 ```console
 $ echo 1 | sudo tee /sys/class/leds/input6::scrolllock/brightness
 ```
 
-# Next steps
+# Наступні кроки
 
-At this point you know your way around a shell enough to accomplish
-basic tasks. You should be able to navigate around to find files of
-interest and use the basic functionality of most programs. In the next
-lecture, we will talk about how to perform and automate more complex
-tasks using the shell and the many handy command-line programs out
-there.
+На цей момент ви вже знаєте достатньо про оболонку, щоб виконувати
+основні задачі. Ви повинні вміти навігуватися, щоб знайти файли, що
+цікавлять, і використовувати основну функціональність більшості програм. У наступної
+лекції ми будемо говорити про те, як виконувати та автоматизувати більш складні
+завдання за допомогою оболонки та багатьох зручних програм командного рядка
+там.
 
-# Exercises
+# Вправи
 
-All classes in this course are accompanied by a series of exercises. Some give
-you a specific task to do, while others are open-ended, like "try using X and Y
-programs". We highly encourage you to try them out.
+Всі заняття в цьому курсі супроводжуються серією вправ. Деякі дають
+вам конкретне завдання, тоді як інші відкриті, наприклад "спробуйте використати X і Y
+програми". Ми настійно рекомендуємо вам їх відпрацювати.
 
-We have not written solutions for the exercises. If you are stuck on anything
-in particular, feel free to send us an email describing what you've tried so
-far, and we will try to help you out.
+Ми не писали рішень для вправ. Якщо у вас щось не виходить
+зокрема, не соромтеся надіслати нам електронний лист, в якому описано, що ви спробували до
+цього пункту, і ми спробуємо вам допомогти.
 
- 1. For this course, you need to be using a Unix shell like Bash or ZSH. If you
-    are on Linux or macOS, you don't have to do anything special. If you are on
-    Windows, you need to make sure you are not running cmd.exe or PowerShell;
-    you can use [Windows Subsystem for
-    Linux](https://docs.microsoft.com/en-us/windows/wsl/) or a Linux virtual
-    machine to use Unix-style command-line tools. To make sure you're running
-    an appropriate shell, you can try the command `echo $SHELL`. If it says
-    something like `/bin/bash` or `/usr/bin/zsh`, that means you're running the
-    right program.
- 1. Create a new directory called `missing` under `/tmp`.
- 1. Look up the `touch` program. The `man` program is your friend.
- 1. Use `touch` to create a new file called `semester` in `missing`.
- 1. Write the following into that file, one line at a time:
+ 1. Для цього курсу вам потрібно використовувати оболонку Unix, таку як Bash або ZSH. Якщо ви
+   на Linux або macOS, вам нічого спеціального робити не треба. Якщо ви на
+   Windows, вам потрібно переконатися, що ви не використовуєте cmd.exe або PowerShell;
+   ви можете використовувати [підсистему Windows для
+   Linux](https://docs.microsoft.com/en-us/windows/wsl/) або віртуальну машину Linux, щоб використовувати інструменти командного рядка у стилі Unix. Щоб переконатися, що ви працюєте
+   в підхожій оболонці, ви можете спробувати команду `echo $SHELL`. Якщо воно говорить
+   щось на зразок `/bin/bash` або `/usr/bin/zsh`, це означає, що ви використовуєте
+   правильну програму.
+ 1. Створіть новий каталог під назвою `missing` в `/tmp`.
+ 1. Дізнайтеся про програму `touch`. Програма `man` - ваш друг.
+ 1. Використовуйте `touch`, щоб створити новий файл під назвою `semester` в `missing`.
+ 1. Запишіть наступне у цей файл, по одному рядку на раз:
     ```
     #!/bin/sh
     curl --head --silent https://missing.csail.mit.edu
     ```
-    The first line might be tricky to get working. It's helpful to know that
-    `#` starts a comment in Bash, and `!` has a special meaning even within
-    double-quoted (`"`) strings. Bash treats single-quoted strings (`'`)
-    differently: they will do the trick in this case. See the Bash
-    [quoting](https://www.gnu.org/software/bash/manual/html_node/Quoting.html)
-    manual page for more information.
- 1. Try to execute the file, i.e. type the path to the script (`./semester`)
-    into your shell and press enter. Understand why it doesn't work by
-    consulting the output of `ls` (hint: look at the permission bits of the
-    file).
- 1. Run the command by explicitly starting the `sh` interpreter, and giving it
-    the file `semester` as the first argument, i.e. `sh semester`. Why does
-    this work, while `./semester` didn't?
- 1. Look up the `chmod` program (e.g. use `man chmod`).
- 1. Use `chmod` to make it possible to run the command `./semester` rather than
-    having to type `sh semester`. How does your shell know that the file is
-    supposed to be interpreted using `sh`? See this page on the
-    [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)) line for more
-    information.
- 1. Use `|` and `>` to write the "last modified" date output by
-    `semester` into a file called `last-modified.txt` in your home
-    directory.
- 1. Write a command that reads out your laptop battery's power level or your
-    desktop machine's CPU temperature from `/sys`. Note: if you're a macOS
-    user, your OS doesn't have sysfs, so you can skip this exercise.
+    Перший рядок може бути складним для реалізації. Корисно знати, що
+    `#` починає коментар в Bash, і `!` має спеціальне значення навіть всередині
+    подвійно-цитованих (`"`) рядків. Bash обробляє одинарно-цитовані рядки (`'`)
+    інакше: вони виконають задачу в цьому випадку. Див. Bash
+    [цитати](https://www.gnu.org/software/bash/manual/html_node/Quoting.html)
+    керівництво для отримання додаткової інформації.
+ 1. Спробуйте виконати файл, тобто введіть шлях до сценарію (`./semester`)
+   в оболонку і натисніть enter. Зрозумійте, чому це не спрацювало
+   консультуючись з виводом `ls` (підказка: подивіться на біти дозволу
+   файлу).
+ 1. Запустіть команду, явно відкривши інтерпретатор `sh`, і віддавши йому
+   файл `semester` як перший аргумент, тобто `sh semester`. Чому це
+   працює, а `./semester` - ні?
+ 1. Дізнайтеся про програму `chmod` (наприклад, використовуйте `man chmod`).
+ 1. Використовуйте `chmod`, щоб зробити можливим запуск команди `./semester`, а не
+   вводити `sh semester`. Як ваша оболонка знає, що файл повинен
+   бути інтерпретований за допомогою `sh`? Див. цю сторінку про
+   [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)) для отримання більш
+   інформації.
+ 1. Використовуйте `|` та `>` для запису дати "останньої зміни", виведеної
+   `semester` у файл під назвою `last-modified.txt` у вашому домашньому
+   каталозі. 
+ 1. Напишіть команду, яка видає рівень живлення акумулятора вашого ноутбука або
+   температуру процесора вашого настільного комп'ютера з `/sys`. Примітка: якщо ви користувач macOS,
+   ваша операційна система не має sysfs, тому ви можете пропустити цю вправу.
