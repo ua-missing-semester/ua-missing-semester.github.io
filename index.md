@@ -1,23 +1,23 @@
 ---
 layout: page
-title: The Missing Semester of Your CS Education
+title: Відсутній Семестр у Вашій CS-освіті
 nositetitle: true
 ---
 
-Classes teach you all about advanced topics within CS, from operating systems
-to machine learning, but there’s one critical subject that’s rarely covered,
-and is instead left to students to figure out on their own: proficiency with
-their tools. We’ll teach you how to master the command-line, use a powerful
-text editor, use fancy features of version control systems, and much more!
+Під час навчання в університеті ви дізнаєтеся все про найсучасніші теми в CS, від операційних систем 
+до машинного навчання. Проте одна важлива тема рідко висвітлюється 
+і залишається на розсуд студентів: володіння 
+інструментами. Ми навчимо вас опановувати командний рядок, користуватися потужним 
+текстовим редактором, використовувати хитромудрі можливості систем контролю версій та багато іншого!
 
-Students spend hundreds of hours using these tools over the course of their
-education (and thousands over their career), so it makes sense to make the
-experience as fluid and frictionless as possible. Mastering these tools not
-only enables you to spend less time on figuring out how to bend your tools to
-your will, but it also lets you solve problems that would previously seem
-impossibly complex.
+Студенти проводять сотні годин, використовуючи ці інструменти протягом своєї
+освіти (і тисячі за їх кар'єру), тому має сенс зробити
+досвід максимально гладким і безтурботним. Заволодіння цими інструментами не
+тільки дозволяє вам витрачати менше часу розібратися, як змусити свої інструменти слухатись
+вас, але й дозволяє розв'язувати проблеми, які раніше здавалися
+неможливо складними.
 
-Read about the [motivation behind this class](/about/).
+Прочитайте про [мотивацію цього курсу](/about/).
 
 {% comment %}
 # Registration
@@ -25,7 +25,7 @@ Read about the [motivation behind this class](/about/).
 Sign up for the IAP 2020 class by filling out this [registration form](https://forms.gle/TD1KnwCSV52qexVt9).
 {% endcomment %}
 
-# Schedule
+# Розклад курсу
 
 {% comment %}
 **Lecture**: 35-225, 2pm--3pm<br>
@@ -48,18 +48,17 @@ Sign up for the IAP 2020 class by filling out this [registration form](https://f
 {% endfor %}
 </ul>
 
-Video recordings of the lectures are available [on
+Відеозаписи лекцій доступні [на
 YouTube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J).
 
-# About the class
+# Про курс
 
-**Staff**: This class is co-taught by [Anish](https://www.anishathalye.com/), [Jon](https://thesquareplanet.com/), and [Jose](http://josejg.com/).<br>
-**Questions**: Email us at [missing-semester@mit.edu](mailto:missing-semester@mit.edu).
+**Викладачі**: [Anish](https://www.anishathalye.com/), [Jon](https://thesquareplanet.com/), [Jose](http://josejg.com/).<br>
 
-# Beyond MIT
+# Крім MIT
 
-We've also shared this class beyond MIT in the hopes that others may
-benefit from these resources. You can find posts and discussion on
+Сподіваючись, що ці матеріали будуть корисними не лише студентам MIT, 
+автори поділилися курсом на наступних платформах:
 
  - [Hacker News](https://news.ycombinator.com/item?id=22226380)
  - [Lobsters](https://lobste.rs/s/ti1k98/missing_semester_your_cs_education_mit)
@@ -81,41 +80,18 @@ Some more URLs:
 - https://twitter.com/MIT_CSAIL/status/1581313961093484545
 {% endcomment %}
 
-# Translations
+# Подяки
 
-- [Chinese (Simplified)](https://missing-semester-cn.github.io/)
-- [Chinese (Traditional)](https://missing-semester-zh-hant.github.io/)
-- [Japanese](https://missing-semester-jp.github.io/)
-- [Korean](https://missing-semester-kr.github.io/)
-- [Portuguese](https://missing-semester-pt.github.io/)
-- [Russian](https://missing-semester-rus.github.io/)
-- [Serbian](https://netboxify.com/missing-semester/)
-- [Spanish](https://missing-semester-esp.github.io/)
-- [Turkish](https://missing-semester-tr.github.io/)
-- [Vietnamese](https://missing-semester-vn.github.io/)
-- [Arabic](https://missing-semester-ar.github.io/)
-- [Italian](https://missing-semester-it.github.io/)
-- [Persian](https://missing-semester-fa.github.io/)
-
-Note: these are external links to community translations. We have not vetted
-them.
-
-Have you created a translation of the course notes from this class? Submit a
-[pull request](https://github.com/missing-semester/missing-semester/pulls) so
-we can add it to the list!
-
-## Acknowledgements
-
-We thank Elaine Mello, Jim Cain, and [MIT Open
-Learning](https://openlearning.mit.edu/) for making it possible for us to
-record lecture videos; Anthony Zolnik and [MIT
-AeroAstro](https://aeroastro.mit.edu/) for A/V equipment; and Brandi Adams and
-[MIT EECS](https://www.eecs.mit.edu/) for supporting this class.
+Автори курсу дякують Elaine Mello, Jim Cain та [MIT Open 
+Learning](https://openlearning.mit.edu/) за можливість 
+запису відеозаписів лекцій; Anthony Zolnik та [MIT 
+AeroAstro](https://aeroastro.mit.edu/) за аудіо та відеообладнання; Brandi Adams и 
+[MIT EECS](https://www.eecs.mit.edu/) за підтримку цього курсу.
 
 ---
 
 <div class="small center">
-<p><a href="https://github.com/missing-semester/missing-semester">Source code</a>.</p>
+<p><a href="https://github.com/ua-missing-semester/ua-missing-semester.github.io">Source code</a>.</p>
 <p>Licensed under CC BY-NC-SA.</p>
 <p>See <a href="/license/">here</a> for contribution &amp; translation guidelines.</p>
 </div>

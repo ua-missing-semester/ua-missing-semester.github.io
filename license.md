@@ -1,33 +1,31 @@
 ---
 layout: default
-title: "License"
+title: "Авторські права"
 permalink: /license/
 ---
 
-# License
+Весь уміст цього курсу, уключено з вихідним кодом вебсайту, конспектами лекцій, вправами та відеозаписами лекцій, поширюється за ліцензією Attribution-NonCommercial-ShareAlike 4.0 International [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-All the content in this course, including the website source code, lecture notes, exercises, and lecture videos is licensed under Attribution-NonCommercial-ShareAlike 4.0 International [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+Це означає, що ви можете
+- **Поширювати** — копіювати та розповсюджувати матеріал на будь-якому носії або у будь-якому форматі
+- **Адаптувати** — реміксувати, трансформувати та будувати на основі матеріалу
 
-This means that you are free to:
-- **Share** — copy and redistribute the material in any medium or format
-- **Adapt** — remix, transform, and build upon the material
+На наступних умовах:
 
-Under the following terms:
+- **Attribution** — Ви повинні вказати відповідне авторство, надати посилання на ліцензію та вказати, чи були внесені зміни. Ви можете зробити це в будь-який розумний спосіб, але не так, щоб це свідчило про те, що ліцензіар схвалює вас або ваше використання.
+- **NonCommercial** — Ви не можете використовувати цей матеріал у комерційних цілях.
+- **ShareAlike** — якщо ви реміксуєте, трансформуєте або створюєте на основі матеріалу, ви повинні поширювати свій внесок за тією ж ліцензією, що й оригінал.
 
-- **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-- **NonCommercial** — You may not use the material for commercial purposes.
-- **ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+Це короткий виклад придатний для читання людиною, а не заміна [ліцензії](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
 
-This is a human-readable summary of (and not a substitute for) the [license](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
+## Інструкція щодо внеску
 
-## Contribution guidelines
+Ви можете вносити виправлення та пропозиції до матеріалів курсу, надсилаючи проблеми та запити на наш GitHub [репозиторій](https://github.com/missing-semester/missing-semester).
+Це стосується і підписів до відеолекцій, які також знаходяться у репозиторії (див. [тут](https://github.com/missing-semester/missing-semester/tree/master/static/files/subtitles/2020)).
 
-You can submit corrections and suggestions to the course material by submitting issues and pull requests on our GitHub [repo](https://github.com/missing-semester/missing-semester). This includes the captions for the video lectures which are also in the repo (see [here](https://github.com/missing-semester/missing-semester/tree/master/static/files/subtitles/2020)).
+## Вказівки щодо перекладу
 
-## Translation guidelines
+Ви можете вільно перекладати конспекти лекцій та вправи, якщо дотримуєтесь умов ліцензії.
+Якщо ваш переклад відображає структуру курсу, будь ласка, зв'яжіться з нами, щоб ми могли розмістити посилання на вашу перекладену версію на нашій сторінці.
 
-You are free to translate the lecture notes and exercises as long as you follow the license terms.
-If your translation mirrors the course structure, please contact us so we can link your translated version from our page.
-
-For translating the video captions, please submit your translations as community contributions in YouTube.
-
+Якщо ви перекладаєте титри до відео, будь ласка, надсилайте свої переклади як внесок у спільноту на YouTube.
